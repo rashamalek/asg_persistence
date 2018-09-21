@@ -6,7 +6,6 @@ import argparse
 import time
 import urllib2
 
-
 def detach(client=None):
     """Detach EBS volume to an Instance."""
     c = client or boto3.client('ec2', 'eu-central-1')
@@ -21,6 +20,7 @@ def main():
     volume_id = None
 
     detach()
+    time.sleep(60)
     sys.exit(0)
 
 
