@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import boto
+import boto3
 from boto.utils import get_instance_metadata
 
 ec2Client = boto3.client('ec2')
