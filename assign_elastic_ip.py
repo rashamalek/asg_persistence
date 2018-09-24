@@ -2,6 +2,8 @@
 import boto
 from boto.utils import get_instance_metadata
 
+ec2Client = boto3.client('ec2')
+
 instance_id = get_instance_metadata()['instance-id']
 
 ec2Client.associate_address(
